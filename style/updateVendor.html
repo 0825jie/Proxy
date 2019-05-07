@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Profile</title>
+    <link rel="stylesheet" type="text/css" href="CSS/main.css">
+    <link rel="stylesheet" type="text/css" href="CSS/update.css">
+
+    <link rel="stylesheet" type="text/css"
+          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+
+<header class="app-header"><span class="app-header__logo"><img class=" header_logo" src="img/lg5.png"></span>
+    <!-- Sidebar toggle button-->
+    <!-- <a class="app-sidebar__toggle" href="#" data-toggle="sidebar" aria-label="Hide Sidebar"></a> -->
+    <!-- Navbar Right Menu-->
+    <ul class="app-nav">
+        <li class="app-search">
+            <input class="app-search__input" type="search" placeholder="Search">
+            <button class="app-search__button"><i class="fa fa-search"></i></button>
+        </li>
+
+        <!-- User Menu-->
+        <li class="dropdown"><a class="app-nav__item" href="#" data-toggle="dropdown" aria-label="Open Profile Menu"><i
+                class="fa fa-user fa-lg"></i></a>
+            <ul class="dropdown-menu settings-menu dropdown-menu-right">
+                <li><a class="dropdown-item" href="updateVendor.html" data-toggle="modal" data-target="#myModal"><i
+                        class="fa fa-cog fa-lg"></i> Settings</a></li>
+                <li><a class="dropdown-item" href="#"><i class="fa fa-user fa-lg"></i> Profile</a></li>
+                <li><a class="dropdown-item" href="login.html"><i class="fa fa-sign-out fa-lg"></i> Logout</a></li>
+            </ul>
+        </li>
+    </ul>
+</header>
+<!-- Sidebar menu-->
+<div class="app-sidebar__overlay" data-toggle="sidebar"></div>
+<aside class="app-sidebar">
+    <div class="app-sidebar__user"><img class="app-sidebar__user-avatar" src="img/profile_logo.png" alt="User Image">
+        <div>
+            <p class="app-sidebar__user-name">User Name</p>
+            <p class="app-sidebar__user-designation">Verified <i class="glyphicon glyphicon-ok-circle"
+                                                                 style="width: 15px; color: green;"></i></p>
+        </div>
+    </div>
+    <ul class="app-menu">
+        <li><a class="app-menu__item active" href="index.html"><span
+                class="app-menu__icon glyphicon glyphicon-random"></span><span
+                class="app-menu__label">Instance</span></a></li>
+
+        <li><a class="app-menu__item" href="proxys.html">
+            <span class="app-menu__icon glyphicon glyphicon-globe"></span>
+            <span class="app-menu__label">Proxy</span></a></li>
+    </ul>
+</aside>
+
+
+<main class="app-content">
+    <form>
+        <h1>Should you have any questions, please do not hesitate to contact me :</h1>
+
+
+        <div class="contentform" id="update_form_data">
+            <div id="sendmessage"> Your message has been sent successfully. Thank you.</div>
+
+            <div class="leftcontact">
+                <div class="form-group">
+                    <p>UserName</p>
+                    <span class="icon-case"><i class="fa fa-male"></i></span>
+                    <!--<input type="text" name="nom" id="nom" data-rule="required"-->
+                    <!--data-msg="Vérifiez votre saisie sur les champs : Le champ 'Nom' doit être renseigné."/>-->
+                    <p class="info_box">Tony</p>
+                    <div class="validation"></div>
+                </div>
+
+            </div>
+
+            <div class="rightcontact">
+
+                <div class="form-group">
+                    <p>E-mail </p>
+                    <span class="icon-case"><i class="fa fa-envelope-o"></i></span>
+                    <p class="info_box">Username@gmail.com</p>
+                    <div class="validation"></div>
+                </div>
+
+            </div>
+
+            <!--// vendor part-->
+            <div class="vendor" id="vendor_aws">
+
+
+                <p class=""><img class="vendor_logo" src="img/aws_logo.png"></p>
+                <div class="form-group info_title">
+
+                    <p>AWS Account </p>
+                    <p>E-mail <span>*</span></p>
+                    <span class="icon-case"><i class="fa fa-envelope-o"></i></span>
+                    <input type="email" name="email" id="email" data-rule="email"
+                           data-msg="Vérifiez votre saisie sur les champs : Le champ 'E-mail' est obligatoire."/>
+                    <div class="validation"></div>
+                </div>
+
+                <div class="form-group">
+
+                    <p>Password <span>*</span></p>
+                    <span class="icon-case"><i class="fa fa-key"></i></span>
+                    <input type="password" name="password" id="" data-rule="password"
+                           data-msg="Vérifiez votre saisie sur les champs : Le champ 'E-mail' est obligatoire."/>
+                    <div class="validation"></div>
+                </div>
+                <div class="form-group">
+                    <button class="try_link">Try to Link</button><i class="glyphicon glyphicon-ok-circle" style="margin: 12px; color: #007bff;"></i>
+                </div>
+
+                <!--<div class="location col-md-12">-->
+                    <!--<p>Server Location<span>*</span>:</p>-->
+                    <!--&lt;!&ndash;=========  select cell ========&ndash;&gt;-->
+                    <!--<div class="col-md-4">-->
+                        <!--<img class="location_flag" src="img/us_flag.png">-->
+                        <!--<p class="location_label"> Chicago</p>-->
+
+                        <!--<form action="" method="post">-->
+                        <!--<table class="location_table" border="1" cellspacing="0" style="width: 120px; height: 40px;">-->
+                            <!--<tr height=20px;>-->
+                                <!--<td class="table_cell"><input type="button" style="border: none" value="+"-->
+                                                              <!--onclick="this.form.c1.value++"/></td>-->
+                                <!--<td class="table_cell"><input id="location_value_1" type="text" style="border: none"-->
+                                                              <!--name="c1" value=0 size="4"/></td>-->
+                                <!--<td class="table_cell"><input type="button" style="border: none" value="-"-->
+                                                              <!--onclick="this.form.c1.value&#45;&#45;"/></td>-->
+                            <!--</tr>-->
+                        <!--</table>-->
+                        <!--</form>-->
+
+                    <!--</div>-->
+                    <!--<div class="col-md-4">-->
+                        <!--<img class="location_flag" src="img/us_flag.png">-->
+                        <!--<p class="location_label"> Chicago</p>-->
+                        <!--<form action="" method="post">-->
+                        <!--<table class="location_table" border="1" cellspacing="0" style="width: 120px; height: 40px;">-->
+                            <!--<tr height=20px;>-->
+                                <!--<td class="table_cell"><input type="button" style="border: none" value="+"-->
+                                                              <!--onclick="this.form.c4.value++"/></td>-->
+                                <!--<td class="table_cell"><input id="location_value_4" type="text" style="border: none"-->
+                                                              <!--name="c4" value=0 size="4"/></td>-->
+                                <!--<td class="table_cell"><input type="button" style="border: none" value="-"-->
+                                                              <!--onclick="this.form.c4.value&#45;&#45;"/></td>-->
+                            <!--</tr>-->
+                        <!--</table>-->
+                        <!--</form>-->
+
+                    <!--</div>-->
+                    <!--<div class="col-md-4">-->
+                        <!--<img class="location_flag" src="img/us_flag.png">-->
+                        <!--<p class="location_label"> Chicago</p>-->
+
+                        <!--<form action="" method="post">-->
+                        <!--<table class="location_table" border="1" cellspacing="0" style="width: 120px; height: 40px;">-->
+                            <!--<tr height=20px;>-->
+                                <!--<td class="table_cell"><input type="button" style="border: none" value="+"-->
+                                                              <!--onclick="this.form.c5.value++"/></td>-->
+                                <!--<td class="table_cell"><input id="location_value_5" type="text" style="border: none"-->
+                                                              <!--name="c5" value=0 size="4"/></td>-->
+                                <!--<td class="table_cell"><input type="button" style="border: none" value="-"-->
+                                                              <!--onclick="this.form.c5.value&#45;&#45;"/></td>-->
+                            <!--</tr>-->
+                        <!--</table>-->
+                        <!--</form>-->
+
+                    <!--</div>-->
+
+                    <!--<div class="col-md-4">-->
+                        <!--<img class="location_flag" src="img/us_flag.png">-->
+                        <!--<p class="location_label"> Chicago</p>-->
+                        <!--<form action="" method="post">-->
+                        <!--<table class="location_table" border="1" cellspacing="0" style="width: 120px; height: 40px;">-->
+                            <!--<tr height=20px;>-->
+                                <!--<td class="table_cell"><input type="button" style="border: none" value="+"-->
+                                                              <!--onclick="this.form.c2.value++"/></td>-->
+                                <!--<td class="table_cell"><input id="location_value_2" type="text" style="border: none"-->
+                                                              <!--name="c2" value=0 size="4"/></td>-->
+                                <!--<td class="table_cell"><input type="button" style="border: none" value="-"-->
+                                                              <!--onclick="this.form.c2.value&#45;&#45;"/></td>-->
+                            <!--</tr>-->
+                        <!--</table>-->
+                        <!--</form>-->
+                    <!--</div>-->
+                    <!--<div class="col-md-4">-->
+                        <!--<img class="location_flag" src="img/us_flag.png">-->
+                        <!--<p class="location_label"> Chicago</p>-->
+                        <!--<form action="" method="post">-->
+                        <!--<table class="location_table" border="1" cellspacing="0" style="width: 120px; height: 40px;">-->
+                            <!--<tr height=20px;>-->
+                                <!--<td class="table_cell"><input type="button" style="border: none" value="+"-->
+                                                              <!--onclick="this.form.c3.value++"/></td>-->
+                                <!--<td class="table_cell"><input id="location_value_3" type="text" style="border: none"-->
+                                                              <!--name="c3" value=0 size="4"/></td>-->
+                                <!--<td class="table_cell"><input type="button" style="border: none" value="-"-->
+                                                              <!--onclick="this.form.c3.value&#45;&#45;"/></td>-->
+                            <!--</tr>-->
+                        <!--</table>-->
+                        <!--</form>-->
+                    <!--</div>-->
+
+                <!--</div>-->
+            </div>
+            <!--// end of vendor aws-->
+
+
+
+            <div class="vendor" id="vendor_digitalOcean">
+
+
+                <p class=""><img class="vendor_logo" style="height: 50px;" src="img/dgo_logo.png"></p>
+                <div class="form-group info_title">
+
+                    <p>DigitalOcean Account </p>
+                    <p>E-mail <span>*</span></p>
+                    <span class="icon-case"><i class="fa fa-envelope-o"></i></span>
+                    <input type="email" name="email" id="" data-rule="email"
+                           data-msg="Vérifiez votre saisie sur les champs : Le champ 'E-mail' est obligatoire."/>
+                    <div class="validation"></div>
+                </div>
+
+                <div class="form-group">
+
+                    <p>Password <span>*</span></p>
+                    <span class="icon-case"><i class="fa fa-key"></i></span>
+                    <input type="password" name="password"  data-rule="password"
+                           data-msg="Vérifiez votre saisie sur les champs : Le champ 'E-mail' est obligatoire."/>
+                    <div class="validation"></div>
+                </div>
+                <div class="form-group">
+                    <button class="try_link">Try to Link</button><i class="glyphicon glyphicon-ok-circle" style="margin: 12px; color: #007bff;"></i>
+                </div>
+
+                <!--<div class="location col-md-12">-->
+                    <!--<p>Server Location<span>*</span>:</p>-->
+                    <!--&lt;!&ndash;=========  select cell ========&ndash;&gt;-->
+                    <!--<div class="col-md-4">-->
+                        <!--<img class="location_flag" src="img/us_flag.png">-->
+                        <!--<p class="location_label"> Chicago</p>-->
+
+                        <!--<form action="" method="post">-->
+                        <!--<table class="location_table" border="1" cellspacing="0" style="width: 120px; height: 40px;">-->
+                            <!--<tr height=20px;>-->
+                                <!--<td class="table_cell"><input type="button" style="border: none" value="+"-->
+                                                              <!--onclick="this.form.c1.value++"/></td>-->
+                                <!--<td class="table_cell"><input id="location_dgo_value_1" type="text" style="border: none"-->
+                                                              <!--name="c1" value=0 size="4"/></td>-->
+                                <!--<td class="table_cell"><input type="button" style="border: none" value="-"-->
+                                                              <!--onclick="this.form.c1.value&#45;&#45;"/></td>-->
+                            <!--</tr>-->
+                        <!--</table>-->
+                        <!--</form>-->
+
+                    <!--</div>-->
+                    <!--<div class="col-md-4">-->
+                        <!--<img class="location_flag" src="img/us_flag.png">-->
+                        <!--<p class="location_label"> Chicago</p>-->
+                        <!--<form action="" method="post">-->
+                        <!--<table class="location_table" border="1" cellspacing="0" style="width: 120px; height: 40px;">-->
+                            <!--<tr height=20px;>-->
+                                <!--<td class="table_cell"><input type="button" style="border: none" value="+"-->
+                                                              <!--onclick="this.form.c4.value++"/></td>-->
+                                <!--<td class="table_cell"><input id="location_dgo_value_4" type="text" style="border: none"-->
+                                                              <!--name="c4" value=0 size="4"/></td>-->
+                                <!--<td class="table_cell"><input type="button" style="border: none" value="-"-->
+                                                              <!--onclick="this.form.c4.value&#45;&#45;"/></td>-->
+                            <!--</tr>-->
+                        <!--</table>-->
+                        <!--</form>-->
+
+                    <!--</div>-->
+                    <!--<div class="col-md-4">-->
+                        <!--<img class="location_flag" src="img/us_flag.png">-->
+                        <!--<p class="location_label"> Chicago</p>-->
+
+                        <!--<form action="" method="post">-->
+                        <!--<table class="location_table" border="1" cellspacing="0" style="width: 120px; height: 40px;">-->
+                            <!--<tr height=20px;>-->
+                                <!--<td class="table_cell"><input type="button" style="border: none" value="+"-->
+                                                              <!--onclick="this.form.c5.value++"/></td>-->
+                                <!--<td class="table_cell"><input id="location_dgo_value_5" type="text" style="border: none"-->
+                                                              <!--name="c5" value=0 size="4"/></td>-->
+                                <!--<td class="table_cell"><input type="button" style="border: none" value="-"-->
+                                                              <!--onclick="this.form.c5.value&#45;&#45;"/></td>-->
+                            <!--</tr>-->
+                        <!--</table>-->
+                        <!--</form>-->
+
+                    <!--</div>-->
+
+                    <!--<div class="col-md-4">-->
+                        <!--<img class="location_flag" src="img/us_flag.png">-->
+                        <!--<p class="location_label"> Chicago</p>-->
+                        <!--<form action="" method="post">-->
+                        <!--<table class="location_table" border="1" cellspacing="0" style="width: 120px; height: 40px;">-->
+                            <!--<tr height=20px;>-->
+                                <!--<td class="table_cell"><input type="button" style="border: none" value="+"-->
+                                                              <!--onclick="this.form.c2.value++"/></td>-->
+                                <!--<td class="table_cell"><input id="location_dgo_value_2" type="text" style="border: none"-->
+                                                              <!--name="c2" value=0 size="4"/></td>-->
+                                <!--<td class="table_cell"><input type="button" style="border: none" value="-"-->
+                                                              <!--onclick="this.form.c2.value&#45;&#45;"/></td>-->
+                            <!--</tr>-->
+                        <!--</table>-->
+                        <!--</form>-->
+                    <!--</div>-->
+                    <!--<div class="col-md-4">-->
+                        <!--<img class="location_flag" src="img/us_flag.png">-->
+                        <!--<p class="location_label"> Chicago</p>-->
+                        <!--<form action="" method="post">-->
+                        <!--<table class="location_table" border="1" cellspacing="0" style="width: 120px; height: 40px;">-->
+                            <!--<tr height=20px;>-->
+                                <!--<td class="table_cell"><input type="button" style="border: none" value="+"-->
+                                                              <!--onclick="this.form.c3.value++"/></td>-->
+                                <!--<td class="table_cell"><input id="location_dgo_value_3" type="text" style="border: none"-->
+                                                              <!--name="c3" value=0 size="4"/></td>-->
+                                <!--<td class="table_cell"><input type="button" style="border: none" value="-"-->
+                                                              <!--onclick="this.form.c3.value&#45;&#45;"/></td>-->
+                            <!--</tr>-->
+                        <!--</table>-->
+                        <!--</form>-->
+                    <!--</div>-->
+
+                <!--</div>-->
+
+            </div>
+
+            <div class="vendor" id="gcp">
+
+
+                <p class=""><img class="vendor_logo" style="height: 60px;" src="img/gcp_logo2.png"></p>
+                <div class="form-group info_title">
+
+                    <p>GCP Account </p>
+                    <p>E-mail <span>*</span></p>
+                    <span class="icon-case"><i class="fa fa-envelope-o"></i></span>
+                    <input type="email" name="email"  data-rule="email"
+                           data-msg="Vérifiez votre saisie sur les champs : Le champ 'E-mail' est obligatoire."/>
+                    <div class="validation"></div>
+                </div>
+
+                <div class="form-group">
+
+                    <p>Password <span>*</span></p>
+                    <span class="icon-case"><i class="fa fa-key"></i></span>
+                    <input type="password" name="password" data-rule="password"
+                           data-msg="Vérifiez votre saisie sur les champs : Le champ 'E-mail' est obligatoire."/>
+                    <div class="validation"></div>
+                </div>
+
+                <div class="form-group">
+                    <button class="try_link">Try to Link</button><i class="glyphicon glyphicon-ok-circle" style="margin: 12px; color: #007bff;"></i>
+                </div>
+
+                <!--<div class="location col-md-12">-->
+                    <!--<p>Server Location<span>*</span>:</p>-->
+                    <!--&lt;!&ndash;=========  select cell ========&ndash;&gt;-->
+                    <!--<div class="col-md-4">-->
+                        <!--<img class="location_flag" src="img/us_flag.png">-->
+                        <!--<p class="location_label"> Chicago</p>-->
+
+                        <!--&lt;!&ndash;<form action="" method="post">&ndash;&gt;-->
+                        <!--<table class="location_table" border="1" cellspacing="0" style="width: 120px; height: 40px;">-->
+                            <!--<tr height=20px;>-->
+                                <!--<td class="table_cell"><input type="button" style="border: none" value="+"-->
+                                                              <!--onclick="this.form.c1.value++"/></td>-->
+                                <!--<td class="table_cell"><input id="location_gcp-value_1" type="text" style="border: none"-->
+                                                              <!--name="c1" value=0 size="4"/></td>-->
+                                <!--<td class="table_cell"><input type="button" style="border: none" value="-"-->
+                                                              <!--onclick="this.form.c1.value&#45;&#45;"/></td>-->
+                            <!--</tr>-->
+                        <!--</table>-->
+                        <!--&lt;!&ndash;</form>&ndash;&gt;-->
+
+                    <!--</div>-->
+                    <!--<div class="col-md-4">-->
+                        <!--<img class="location_flag" src="img/us_flag.png">-->
+                        <!--<p class="location_label"> Chicago</p>-->
+                        <!--&lt;!&ndash;<form action="" method="post">&ndash;&gt;-->
+                        <!--<table class="location_table" border="1" cellspacing="0" style="width: 120px; height: 40px;">-->
+                            <!--<tr height=20px;>-->
+                                <!--<td class="table_cell"><input type="button" style="border: none" value="+"-->
+                                                              <!--onclick="this.form.c4.value++"/></td>-->
+                                <!--<td class="table_cell"><input id="location_gcp_value_4" type="text" style="border: none"-->
+                                                              <!--name="c4" value=0 size="4"/></td>-->
+                                <!--<td class="table_cell"><input type="button" style="border: none" value="-"-->
+                                                              <!--onclick="this.form.c4.value&#45;&#45;"/></td>-->
+                            <!--</tr>-->
+                        <!--</table>-->
+                        <!--&lt;!&ndash;</form>&ndash;&gt;-->
+
+                    <!--</div>-->
+                    <!--<div class="col-md-4">-->
+                        <!--<img class="location_flag" src="img/us_flag.png">-->
+                        <!--<p class="location_label"> Chicago</p>-->
+
+                        <!--&lt;!&ndash;<form action="" method="post">&ndash;&gt;-->
+                        <!--<table class="location_table" border="1" cellspacing="0" style="width: 120px; height: 40px;">-->
+                            <!--<tr height=20px;>-->
+                                <!--<td class="table_cell"><input type="button" style="border: none" value="+"-->
+                                                              <!--onclick="this.form.c5.value++"/></td>-->
+                                <!--<td class="table_cell"><input id="location_gcp_value_5" type="text" style="border: none"-->
+                                                              <!--name="c5" value=0 size="4"/></td>-->
+                                <!--<td class="table_cell"><input type="button" style="border: none" value="-"-->
+                                                              <!--onclick="this.form.c5.value&#45;&#45;"/></td>-->
+                            <!--</tr>-->
+                        <!--</table>-->
+                        <!--&lt;!&ndash;</form>&ndash;&gt;-->
+
+                    <!--</div>-->
+
+                    <!--<div class="col-md-4">-->
+                        <!--<img class="location_flag" src="img/us_flag.png">-->
+                        <!--<p class="location_label"> Chicago</p>-->
+                        <!--&lt;!&ndash;<form action="" method="post">&ndash;&gt;-->
+                        <!--<table class="location_table" border="1" cellspacing="0" style="width: 120px; height: 40px;">-->
+                            <!--<tr height=20px;>-->
+                                <!--<td class="table_cell"><input type="button" style="border: none" value="+"-->
+                                                              <!--onclick="this.form.c2.value++"/></td>-->
+                                <!--<td class="table_cell"><input id="location_gcp_value_2" type="text" style="border: none"-->
+                                                              <!--name="c2" value=0 size="4"/></td>-->
+                                <!--<td class="table_cell"><input type="button" style="border: none" value="-"-->
+                                                              <!--onclick="this.form.c2.value&#45;&#45;"/></td>-->
+                            <!--</tr>-->
+                        <!--</table>-->
+                        <!--&lt;!&ndash;</form>&ndash;&gt;-->
+                    <!--</div>-->
+                    <!--<div class="col-md-4">-->
+                        <!--<img class="location_flag" src="img/us_flag.png">-->
+                        <!--<p class="location_label"> Chicago</p>-->
+                        <!--&lt;!&ndash;<form action="" method="post">&ndash;&gt;-->
+                        <!--<table class="location_table" border="1" cellspacing="0" style="width: 120px; height: 40px;">-->
+                            <!--<tr height=20px;>-->
+                                <!--<td class="table_cell"><input type="button" style="border: none" value="+"-->
+                                                              <!--onclick="this.form.c3.value++"/></td>-->
+                                <!--<td class="table_cell"><input id="location_gcp_value_3" type="text" style="border: none"-->
+                                                              <!--name="c3" value=0 size="4"/></td>-->
+                                <!--<td class="table_cell"><input type="button" style="border: none" value="-"-->
+                                                              <!--onclick="this.form.c3.value&#45;&#45;"/></td>-->
+                            <!--</tr>-->
+                        <!--</table>-->
+                        <!--&lt;!&ndash;</form>&ndash;&gt;-->
+                    <!--</div>-->
+
+                <!--</div>-->
+
+            </div>
+
+
+        </div>
+
+
+    </form>
+</main>
+
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+
+<script src="js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
